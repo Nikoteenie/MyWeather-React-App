@@ -1,0 +1,75 @@
+:root {
+  --display-font: decoy, serif;
+  --secondary-font: basic-sans, sans-serif;
+}
+
+.Weather {
+  border: 2px solid black;
+  border-radius: 1%;
+  padding: 25px;
+}
+
+.Weather form {
+  margin-bottom: 5px;
+}
+
+.Weather img {
+  display: block;
+  margin: 20px auto;
+}
+
+.Weather h1,
+.temperature,
+.description,
+.humidity-wind {
+  text-align: center;
+}
+
+.Weather h1,
+.description {
+  font-family: var(--display-font);
+}
+
+.Weather h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.Weather .humidity,
+.wind,
+.units {
+  font-family: var(--secondary-font);
+}
+
+.Weather .temperature,
+.units {
+  font-weight: 700;
+}
+
+.Weather .temperature {
+  font-size: 50px;
+
+  
+}
+
+.Weather .units {
+  font-size: 25px;
+  position: relative;
+  top: -20px;
+  }
+
+.Weather .description {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+ line-height: 30%;
+ margin-bottom: 15px;
+}
+
+.Weather .humidity-wind {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px auto;
+  max-width: 250px;
+}
