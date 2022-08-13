@@ -24,16 +24,23 @@ export default function Weather() {
           </div>
         </div>
       </form>
-      <img className="clearfix" src={img} width="400" alt="" />
-      <h1 className="city">Key Largo</h1>{" "}
+      <img className="img-fluid" src={img} width="350" alt="" />
+      <h1 className="city">Los Angeles</h1>{" "}
       <div className="temperature">
         90<span className="units">°C</span>
       </div>
-      <div className="description">Partly Cloudy</div>
-      <div className="humidity-wind row g-0 text-center">
-        <div className="humidity col-6">Humidity: 90% </div>
-        <div className="wind col-6">Wind: 5 km/h</div>{" "}
+      <div className="row align-items-center">
+        <div className="col-6">
+          <div className="description">Partly Cloudy</div>
+          <div className="date">Saturday, 11:30</div>
+        </div>
+        <div className="col-6">
+            <div className="humidity">Humidity: 90% </div>
+        <div className="wind">Wind: 5 km/h</div>{" "}
+        </div>
       </div>
-    </div>
+     
+      
+      </div>
   );
 }

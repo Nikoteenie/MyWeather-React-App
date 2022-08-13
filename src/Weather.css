@@ -6,7 +6,7 @@
 .Weather {
   border: 2px solid black;
   border-radius: 1%;
-  padding: 25px;
+  padding: 10px;
 }
 
 .Weather form {
@@ -15,18 +15,14 @@
 
 .Weather img {
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
-.Weather h1,
-.temperature,
-.description,
-.humidity-wind {
+.Weather h1, .temperature {
   text-align: center;
 }
 
-.Weather h1,
-.description {
+.Weather h1{
   font-family: var(--display-font);
 }
 
@@ -36,11 +32,13 @@
   margin: 0;
 }
 
-.Weather .humidity,
+.Weather, .temperature, .description, .date, .humidity,
 .wind,
 .units {
   font-family: var(--secondary-font);
+  font-size: 15px;
 }
+
 
 .Weather .temperature,
 .units {
@@ -49,8 +47,6 @@
 
 .Weather .temperature {
   font-size: 50px;
-
-  
 }
 
 .Weather .units {
@@ -60,16 +56,12 @@
   }
 
 .Weather .description {
-  font-size: 25px;
-  font-style: italic;
-  font-weight: 400;
- line-height: 30%;
- margin-bottom: 15px;
+font-style: italic;
+font-size: 20px;
+font-weight: bold;
+  
 }
 
-.Weather .humidity-wind {
-  font-size: 18px;
-  font-weight: 400;
-  margin: 0px auto;
-  max-width: 250px;
+.Weather .humidity, .wind {
+  text-align: right;
 }
