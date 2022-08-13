@@ -13,7 +13,7 @@
   margin-bottom: 5px;
 }
 
-.Weather img {
+.Weather .image {
   display: block;
   margin: 10px auto;
 }
@@ -50,9 +50,13 @@
 }
 
 .Weather .units {
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
   top: -20px;
+  }
+
+  .Weather .units a {
+    text-decoration: none;
   }
 
 .Weather .description {
