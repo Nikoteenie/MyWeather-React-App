@@ -20,10 +20,15 @@ export default function WeatherForecastDay(props) {
     return days[day];
   }
 
+   function forecastIcon() {
+     let forecastIcon = props.data.icon;
+     return `${forecastIcon}`;
+   }
+
   return (
     <div>
       <div className="WeatherForecast-day">{day()}</div>
-      <img alt="" src={props.icon} width="50" />
+      <img className="img-fluid" alt="" src={forecastIcon()} width="50" />
       <div className="WeatherForecast-temperatures">
         <span className="WeatherForecast-temperature-max">
           {maxTemperature()}

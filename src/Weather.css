@@ -3,38 +3,38 @@
   --secondary-font: basic-sans, sans-serif;
 }
 
-.Weather {
+.Main-Weather {
   border: 2px solid black;
-  border-radius: 1%;
+
   padding: 10px;
 }
 
-.Weather form {
+.Main-Weather form {
   margin-bottom: 5px;
 }
 
-.Weather .image {
+.Main-Weather .image {
   display: block;
   margin: 15px auto;
   padding-top: 30px;
 }
 
-.Weather h1,
+.Main-Weather h1,
 .temperature {
   text-align: center;
 }
 
-.Weather h1 {
+.Main-Weather h1 {
   font-family: var(--display-font);
 }
 
-.Weather h1 {
+.Main-Weather h1 {
   font-size: 60px;
   font-weight: 700;
   margin: 0;
 }
 
-.Weather,
+.Main-Weather,
 .temperature,
 .description,
 .date,
@@ -45,32 +45,33 @@
   font-size: 15px;
 }
 
-.Weather .temperature,
+.Main-Weather .temperature,
 .units {
   font-weight: 700;
 }
 
-.Weather .temperature {
+.Main-Weather .temperature {
   font-size: 50px;
 }
 
-.Weather .units {
+.Main-Weather .units {
   font-size: 20px;
   position: relative;
   top: -20px;
+  padding-left: 5px;
 }
 
-.Weather .units a {
+.Main-Weather .units a {
   text-decoration: none;
 }
 
-.Weather .description {
+.Main-Weather .description {
   font-style: italic;
   font-size: 20px;
   font-weight: bold;
 }
 
-.Weather .humidity,
+.Main-Weather .humidity,
 .wind {
   text-align: right;
 }
