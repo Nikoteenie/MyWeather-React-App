@@ -15,30 +15,35 @@
 
 .Weather .image {
   display: block;
-  margin: 10px auto;
+  margin: 15px auto;
+  padding-top: 30px;
 }
 
-.Weather h1, .temperature {
+.Weather h1,
+.temperature {
   text-align: center;
 }
 
-.Weather h1{
+.Weather h1 {
   font-family: var(--display-font);
 }
 
 .Weather h1 {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 700;
   margin: 0;
 }
 
-.Weather, .temperature, .description, .date, .humidity,
+.Weather,
+.temperature,
+.description,
+.date,
+.humidity,
 .wind,
 .units {
   font-family: var(--secondary-font);
   font-size: 15px;
 }
-
 
 .Weather .temperature,
 .units {
@@ -53,19 +58,19 @@
   font-size: 20px;
   position: relative;
   top: -20px;
-  }
-
-  .Weather .units a {
-    text-decoration: none;
-  }
-
-.Weather .description {
-font-style: italic;
-font-size: 20px;
-font-weight: bold;
-  
 }
 
-.Weather .humidity, .wind {
+.Weather .units a {
+  text-decoration: none;
+}
+
+.Weather .description {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Weather .humidity,
+.wind {
   text-align: right;
 }

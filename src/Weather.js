@@ -1,7 +1,10 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
+
 
 import "./Weather.css";
 
@@ -17,9 +20,9 @@ const [weatherData, setWeatherData] = useState({ ready: false });
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      icon: `./images/teeniez/${
-  response.data.weather[0].icon
-}.gif`,
+      mainIcon: `./images/teeniez/${response.data.weather[0].icon}.gif`,
+      icon: `./images/icons/${response.data.weather[0].icon}.gif`,
+
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -65,6 +68,10 @@ const [weatherData, setWeatherData] = useState({ ready: false });
         </form>
 
         <WeatherInfo data={weatherData} />
+       <WeatherForecast
+         coordinates={weatherData.coordinates}
+         icon= {weatherData.icon}
+        />
       </div>
     );
   } else {
