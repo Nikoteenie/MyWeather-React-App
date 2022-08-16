@@ -14,17 +14,13 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
-    setForecast (response.data.daily);
-    setIcon ({
-      icon: `./images/icons/${response.data.daily.weather[0].icon}.gif`,
-     });
+    setForecast(response.data.daily);
+    setIcon(response.daily.weather[0].icon);
     setLoaded(true);
   }
 
- 
-
   function load() {
-    let apiKey = "d59f6dffd1de1c1813e816ad002514b3";
+    let apiKey = "b6520355a84f46a27e6fe4523cdc2546";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
@@ -32,7 +28,7 @@ export default function WeatherForecast(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (loaded){ 
+  if (loaded) {
     return (
       <div className="WeatherForecast">
         <div className="row">
@@ -54,7 +50,6 @@ export default function WeatherForecast(props) {
   } else {
     load();
 
-return null;
+    return null;
   }
-
 }
