@@ -15,7 +15,9 @@ export default function WeatherForecast(props) {
 
   function handleResponse(response) {
     setForecast(response.data.daily);
-    setIcon(response.daily.weather[0].icon);
+    setIcon({
+      icon: `./images/icons/${response.data.weather[0].icon}.gif`
+  });
     setLoaded(true);
   }
 
