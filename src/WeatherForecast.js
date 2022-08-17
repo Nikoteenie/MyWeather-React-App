@@ -14,15 +14,15 @@ export default function WeatherForecast(props) {
   }, [props.coordinates]);
 
   function handleResponse(response) {
+    setLoaded(true);
     setForecast(response.data.daily);
     setIcon({
-      icon: `./images/icons/${response.data.weather[0].icon}.gif`
-  });
-    setLoaded(true);
+      icon: `./images/icons/${response.data.daily[0].weather[0].icon}.gif`,
+    });
   }
 
   function load() {
-    let apiKey = "b6520355a84f46a27e6fe4523cdc2546";
+    let apiKey = "d59f6dffd1de1c1813e816ad002514b3";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
@@ -35,16 +35,16 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <WeatherForecastDay data={forecast[0]} icon={icon[0]} />
+            <WeatherForecastDay data={forecast[0]} image={icon[0]} />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[1]} icon={icon[1]} />
+            <WeatherForecastDay data={forecast[1]} image={icon[1]} />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[2]} icon={icon[2]} />
+            <WeatherForecastDay data={forecast[2]} image={icon[2]} />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[3]} icon={icon[3]} />
+            <WeatherForecastDay data={forecast[3]} image={icon[3]} />
           </div>
         </div>
       </div>

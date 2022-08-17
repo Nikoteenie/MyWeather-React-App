@@ -37,7 +37,7 @@ const [weatherData, setWeatherData] = useState({ ready: false });
   }
 
   function search() {
-    let apiKey = "b6520355a84f46a27e6fe4523cdc2546";
+    let apiKey = "d59f6dffd1de1c1813e816ad002514b3";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
