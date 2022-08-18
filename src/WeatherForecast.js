@@ -7,7 +7,6 @@ import "./WeatherForecast.css";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
-  let [icon, setIcon] = useState(null);
 
   useEffect(() => {
     setLoaded(false);
@@ -16,9 +15,6 @@ export default function WeatherForecast(props) {
   function handleResponse(response) {
     setLoaded(true);
     setForecast(response.data.daily);
-    setIcon({
-      icon: `./images/icons/${response.data.daily[0].weather[0].icon}.gif`,
-    });
   }
 
   function load() {
@@ -35,16 +31,28 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <WeatherForecastDay data={forecast[0]} image={icon[0]} />
+            <WeatherForecastDay
+              data={forecast[0]}
+              image={`./images/icons/${forecast[0].weather[0].icon}.gif`}
+            />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[1]} image={icon[1]} />
+            <WeatherForecastDay
+              data={forecast[1]}
+              image={`./images/icons/${forecast[1].weather[0].icon}.gif`}
+            />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[2]} image={icon[2]} />
+            <WeatherForecastDay
+              data={forecast[2]}
+              image={`./images/icons/${forecast[2].weather[0].icon}.gif`}
+            />
           </div>
           <div className="col">
-            <WeatherForecastDay data={forecast[3]} image={icon[3]} />
+            <WeatherForecastDay
+              data={forecast[3]}
+              image={`./images/icons/${forecast[3].weather[0].icon}.gif`}
+            />
           </div>
         </div>
       </div>

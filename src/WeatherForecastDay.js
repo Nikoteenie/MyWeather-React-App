@@ -26,7 +26,7 @@ export default function WeatherForecastDay(props) {
       <img
         className="img-fluid"
         alt=""
-        src= {props.image.icon}
+        src={props.image}
         width="50"
       />
       <div className="WeatherForecast-temperatures">
