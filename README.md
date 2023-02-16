@@ -7,27 +7,38 @@ https://teenie-weather-react-app.netlify.app/
 ```javascript
 
 export default function WeatherForecast(props) {
+
+//useState hook to create a state variable "loaded" and initialize it as "false"
   let [loaded, setLoaded] = useState(false);
+  
+//useState hook to create a state variable "forecast" and initialize it as "null"
   let [forecast, setForecast] = useState(null);
 
+// useEffect hook to update state when the coordinates change
   useEffect(() => {
     setLoaded(false);
   }, [props.coordinates]);
 
+
+// updates the component's state with the response data
   function handleResponse(response) {
     setLoaded(true);
     setForecast(response.data.daily);
   }
 
+//function that featches the data of a weather forecast using the OpenWeatherMap API
   function load() {
     let apiKey = "d59f6dffd1de1c1813e816ad002514b3";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
 
+
+//Sends a GET request using Axios and then updates the components state with response data
     axios.get(apiUrl).then(handleResponse);
   }
 
+// Rendering the weather forecast data if the "loaded" state is true, or else it calls load function and returns null
   if (loaded) {
     return (
       <div className="WeatherForecast">
